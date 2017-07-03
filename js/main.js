@@ -43,3 +43,7 @@ if (user === computer) {
       console.log("perdu");
       pointComputer++;
         }
+
+        else if (user === "" || user !== "pierre" || user !== "feuille" || user !== "ciseaux") {
+          user = prompt("Error Replay");
+        }
