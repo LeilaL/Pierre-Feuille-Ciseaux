@@ -1,9 +1,22 @@
 @font-face {
-  font-family:
-  src: url(../font/);
+  font-family: "monkey";
+  src: url(../font/monkey/monkey.otf);
+}
+
+@font-face {
+  font-family: "cursive";
+  src: url(../font/cursive/Cursivestandard.ttf);
 }
 
 html {
   background: url("../img/jeu.png") center center no-repeat fixed;
-  background-size: 47%;
+  background-size: 44%;
+}
+
+main p {
+ font-family: "cursive";
+}
+
+main h1 {
+  font-family: "monkey";
 }

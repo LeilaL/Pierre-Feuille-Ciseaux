@@ -1,62 +1,64 @@
+function game () {
+
 var pointUser = 0;
-  var pointComputer = 0;
+var pointComputer = 0;
 
-  var user;
-  var computer;
+var user;
+var computer;
 
-  while (pointUser < 3 && pointComputer <  3) {
+while (pointUser < 3 && pointComputer <  3) {
   user = prompt("Pierre, feuille ou ciseaux");
   computer = Math.floor((Math.random() * 3) + 1);
 
   if (computer === 1) {
     computer="pierre";
-}
-else if (computer === 2) {
+  }
+  else if (computer === 2) {
     computer="feuille";
-}
-else {
+  }
+  else {
     computer="ciseaux";
-}
+  }
 
-console.log("Vous: " + user);
-console.log("l'Ordinateur: " + computer);
+  document.getElementById("choixJoueur").innerHTML ="Vous: " + user;
+  document.getElementById("choixOrdi").innerHTML ="l'Ordinateur: " + computer;
 
-if (user === computer) {
-        console.log("égalité");
-    }
+  if (user === computer) {
+    console.log("égalité");
+  }
 
-    else if (user === "pierre" && computer === "ciseaux") {
-        console.log("1 point pour toi");
-        pointUser++;
-        }
-
-
-
-    else if (user === "feuille" && computer === "pierre") {
-      console.log("1 point pour toi");
-      pointUser++;
-        }
+  else if (user === "pierre" && computer === "ciseaux") {
+    console.log("1 point pour toi");
+    pointUser++;
+  }
 
 
-
-    else if (user === "ciseaux" && computer === "pierre") {
-      console.log("perdu");
-      pointComputer++;
-        }
-
-        else if (user === "" || user !== "pierre" || user !== "feuille" || user !== "ciseaux") {
-          user = prompt("Error Replay");
-        }
-
-        console.log("Vous: " + pointUser);
- console.log("l'Ordinateur: " + pointComputer);
+  else if (user === "feuille" && computer === "pierre") {
+    console.log("1 point pour toi");
+    pointUser++;
+  }
 
 
- if (pointUser < 3) {
-console.log("Tu as gagné la partie !");
-}
 
-else {
-console.log("Tu as perdu la partie !");
+  else if (user === "ciseaux" && computer === "pierre") {
+    console.log("perdu");
+    pointComputer++;
+  }
+
+  else if (user === "" || user !== "pierre" || user !== "feuille" || user !== "ciseaux") {
+    user = prompt("Error Replay");
+  }
+
+  document.getElementById("pointJoueur").innerHTML = "Vous: " + pointUser;
+  document.getElementById("pointOrdi").innerHTML = "l'Ordinateur: " + pointComputer;
+
+
+  if (pointUser < 3) {
+    console.log("Tu as gagné la partie !");
+  }
+
+  else {
+    console.log("Tu as perdu la partie !");
+  }
 }
 }
