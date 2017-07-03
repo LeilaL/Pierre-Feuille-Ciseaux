@@ -2,3 +2,8 @@
   font-family:
   src: url(../font/);
 }
+
+html {
+  background: url("../img/jeu.png") center center no-repeat fixed;
+  background-size: 47%;
+}
