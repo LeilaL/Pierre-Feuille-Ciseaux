@@ -24,41 +24,50 @@ while (pointUser < 3 && pointComputer <  3) {
   document.getElementById("choixOrdi").innerHTML ="l'Ordinateur: " + computer;
 
   if (user === computer) {
-    console.log("égalité");
+    document.getElementById("resultat").innerHTML ="égalité";
   }
 
   else if (user === "pierre" && computer === "ciseaux") {
-    console.log("1 point pour toi");
+    document.getElementById("resultat").innerHTML ="1 point pour toi";
     pointUser++;
   }
 
 
   else if (user === "feuille" && computer === "pierre") {
-    console.log("1 point pour toi");
+  document.getElementById("resultat").innerHTML ="1 point pour toi";
     pointUser++;
   }
 
+  else if (user === "feuille" && computer === "ciseaux") {
+      document.getElementById("resultat").innerHTML ="perdu";
+      pointComputer++;
+        }
 
+        else if (user === "pierre" && computer === "feuille") {
+      document.getElementById("resultat").innerHTML ="perdu";
+      pointComputer++;
+        }
+
+        else if (user === "ciseaux" && computer === "feuille") {
+      document.getElementById("resultat").innerHTML ="1 point pour toi";
+      pointUser++;
+      }
 
   else if (user === "ciseaux" && computer === "pierre") {
-    console.log("perdu");
+    document.getElementById("resultat").innerHTML ="perdu";
     pointComputer++;
-  }
-
-  else if (user === "" || user !== "pierre" || user !== "feuille" || user !== "ciseaux") {
-    user = prompt("Error Replay");
   }
 
   document.getElementById("pointJoueur").innerHTML = "Vous: " + pointUser;
   document.getElementById("pointOrdi").innerHTML = "l'Ordinateur: " + pointComputer;
+}
 
-
-  if (pointUser < 3) {
-    console.log("Tu as gagné la partie !");
+  if (pointUser === 3) {
+    document.getElementById("winner").innerHTML ="Tu as gagné la partie !";
   }
 
   else {
-    console.log("Tu as perdu la partie !");
+    document.getElementById("winner").innerHTML ="Tu as perdu la partie !";
   }
-}
+
 }
