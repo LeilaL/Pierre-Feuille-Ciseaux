@@ -20,3 +20,26 @@ else {
 
 console.log("Vous: " + user);
 console.log("l'Ordinateur: " + computer);
+
+if (user === computer) {
+        console.log("égalité");
+    }
+
+    else if (user === "pierre" && computer === "ciseaux") {
+        console.log("1 point pour toi");
+        pointUser++;
+        }
+
+
+
+    else if (user === "feuille" && computer === "pierre") {
+      console.log("1 point pour toi");
+      pointUser++;
+        }
+
+
+
+    else if (user === "ciseaux" && computer === "pierre") {
+      console.log("perdu");
+      pointComputer++;
+        }
