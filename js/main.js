@@ -47,3 +47,16 @@ if (user === computer) {
         else if (user === "" || user !== "pierre" || user !== "feuille" || user !== "ciseaux") {
           user = prompt("Error Replay");
         }
+
+        console.log("Vous: " + pointUser);
+ console.log("l'Ordinateur: " + pointComputer);
+
+
+ if (pointUser < 3) {
+console.log("Tu as gagné la partie !");
+}
+
+else {
+console.log("Tu as perdu la partie !");
+}
+}
